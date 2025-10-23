@@ -1,0 +1,87 @@
+/* Contenedor y título igual que antes */
+#calendario {
+  width: 90%;
+  max-width: 1200px;
+  margin: 40px auto;
+  font-family: 'Titillium Web', sans-serif;
+  color: #fff;
+  padding: 10px;
+}
+
+#calendario h2 {
+  text-align: center;
+  color: #f10600;
+  margin-bottom: 30px;
+  font-size: 2em;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+/* Grid de GP */
+#gridCalendario {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 25px;
+}
+
+/* Tarjeta de GP */
+.cardGP {
+  background-color: #111;
+  border-radius: 15px;
+  overflow: hidden;
+  transition: transform 0.4s cubic-bezier(0.25, 0.8, 0.25, 1),
+              box-shadow 0.4s,
+              border 0.4s;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+  opacity: 0;
+  transform: translateY(20px);
+  animation: appearUp 0.6s forwards;
+}
+
+/* Glow y hover */
+.cardGP:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 12px 25px rgba(0,0,0,0.6),
+              0 0 15px rgba(241,6,0,0.6);
+  border: 2px solid #f10600;
+}
+
+/* Animación de entrada */
+@keyframes appearUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Imagen del circuito */
+.imgCircuito {
+  width: 100%;
+  aspect-ratio: 16/9;
+  background-size: cover;
+  background-position: center;
+  border-bottom: 2px solid #f10600;
+  transition: transform 0.4s ease;
+}
+
+.cardGP:hover .imgCircuito {
+  transform: scale(1.05);
+}
+
+/* Información del GP */
+.infoGP {
+  padding: 12px;
+  text-align: center;
+}
+
+.infoGP h3 {
+  margin: 8px 0;
+  font-size: 1.2em;
+}
+
+.infoGP p {
+  margin: 4px 0;
+  font-size: 0.95em;
+  color: #ccc;
+}

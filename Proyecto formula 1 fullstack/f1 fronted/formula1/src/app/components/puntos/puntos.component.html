@@ -1,0 +1,26 @@
+<div class="puntos-container">
+  <!-- Campeonato Constructores -->
+  <div class="constructores">
+    <h2>Campeonato Constructores</h2>
+    <div *ngFor="let escuderia of escuderias" class="escuderia-card">
+      <img [src]="'0' + escuderia.id + '.png'" 
+           alt="{{ escuderia.nombre }}" 
+           class="escuderia-logo" />
+      <div class="escuderia-info">
+        <h3>{{ escuderia.nombre }}</h3>
+        <p>Puntos temporada: {{ escuderia.puntosTemporadaActual }}</p>
+        <p>Campeonatos Constructores: {{ escuderia.titulosConstructores }}</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Campeonato Pilotos -->
+  <div class="pilotos">
+    <h2>Campeonato Pilotos</h2>
+    <ul>
+      <li *ngFor="let piloto of pilotosTotales">
+        {{ piloto.nombre }} - {{ piloto.total }}
+      </li>
+    </ul>
+  </div>
+</div>

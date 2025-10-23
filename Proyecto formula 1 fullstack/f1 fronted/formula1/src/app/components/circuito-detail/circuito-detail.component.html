@@ -1,0 +1,23 @@
+<aside id="circuito-detail">
+  <!-- Imagen del circuito -->
+  <div class="imgCircuitoDetail" [style.background-image]="'url(' + getImagenCircuito(circuito?.nombreCircuito) + ')'"></div>
+
+  <!-- Título y Gran Premio -->
+  <h2>{{ circuito?.nombreCircuito }}</h2>
+  <p><strong>Gran Premio:</strong> {{ circuito?.nombreGranPremio }}</p>
+
+  <!-- Grid de información -->
+  <div class="gridInfo">
+    <div><strong>País:</strong> {{ circuito?.ubicacion }}</div>
+    <div><strong>Longitud:</strong> {{ circuito?.longitudKm }} km</div>
+    <div><strong>Vueltas:</strong> {{ circuito?.vueltas }}</div>
+    <div><strong>Curvas:</strong> {{ circuito?.curvas }}</div>
+    <div><strong>Carga aerodinámica:</strong> {{ circuito?.cargaAerodinamica }}</div>
+    <div><strong>Desgaste de neumáticos:</strong> {{ circuito?.desgasteNeumaticos }}</div>
+    <div><strong>proximo GP:</strong> {{ circuito?.fecha }}</div>
+    <div><strong>Récord de vuelta:</strong> {{ circuito?.recordVuelta }} ({{ circuito?.recordVueltaPiloto }}, {{ circuito?.recordVueltaAnio }})</div>
+    <div><strong>Escudería con más victorias:</strong> {{ circuito?.escuderiaMasVictorias }}</div>
+    <div><strong>Motor con más victorias:</strong> {{ circuito?.motorMasVictorias }}</div>
+    <div><strong>Neumáticos con más victorias:</strong> {{ circuito?.neumaticosMasVictorias }}</div>
+  </div>
+</aside>

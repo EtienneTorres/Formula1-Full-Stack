@@ -1,0 +1,14 @@
+<aside id="circuitos">
+  <h2>Circuitos de la Temporada {{temporada}}</h2>
+
+  <div id="gridCircuitos">
+    <div class="cardCircuito" *ngFor="let c of calendario?.circuitos">
+        <a [routerLink]="['/circuitos', c.id]">
+         <div class="imgCircuito" [style.background-image]="'url(' + getImagenCircuito(c.nombreCircuito) + ')'">
+      </div>
+        <h3>{{ c.nombreCircuito }}</h3>
+        <p>{{ c.nombreGranPremio }}</p>
+      </a>
+    </div>
+  </div>
+</aside>

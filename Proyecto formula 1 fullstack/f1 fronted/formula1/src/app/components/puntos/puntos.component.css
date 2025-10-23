@@ -1,0 +1,164 @@
+/* ================================
+   🎯 Layout general
+================================ */
+.puntos-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 40px;
+  padding: 40px;
+  max-width: 1100px;
+  margin: 50px auto;
+  background: linear-gradient(145deg, #0d0d0d, #1a1a1a);
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.8);
+  font-family: 'Inter', sans-serif;
+  color: #fff;
+}
+
+/* ================================
+   🏎️ Constructores
+================================ */
+.constructores {
+  width: 500px; /* ✅ ancho fijo equilibrado */
+  border-right: 1px solid rgba(255, 255, 255, 0.1);
+  padding-right: 25px;
+  overflow: visible; /* sin scroll */
+}
+
+/* Tarjetas */
+.escuderia-card {
+  display: flex;
+  gap: 15px;
+  background: rgba(255,255,255,0.05);
+  padding: 14px 18px;
+  border-radius: 14px;
+  margin-bottom: 14px;
+  align-items: center;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.4);
+  animation: fadeInUp 0.5s ease both;
+}
+
+.escuderia-card:hover {
+  transform: scale(1.04);
+  background: rgba(255,255,255,0.08);
+  box-shadow: 0 6px 25px rgba(0,0,0,0.6);
+}
+
+.escuderia-logo {
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+  border-radius: 8px;
+  border: 1px solid #f5c518;
+  background: #111;
+  padding: 3px;
+}
+
+.escuderia-info h3 {
+  margin: 0;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #f5c518;
+}
+
+.escuderia-info p {
+  margin: 3px 0;
+  color: #ccc;
+  font-size: 0.9rem;
+}
+
+/* ================================
+   👨‍✈️ Pilotos
+================================ */
+.pilotos {
+  width: 300px; /* ✅ equilibrado visualmente */
+  padding-left: 25px;
+  overflow: visible;
+}
+
+/* Título */
+.pilotos h2, .constructores h2 {
+  font-size: 1.25rem;
+  color: #f5c518;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 20px;
+  font-weight: 700;
+  text-align: left;
+}
+
+/* Lista */
+.pilotos ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.pilotos li {
+  background: rgba(255, 197, 24, 0.05);
+  margin: 4px 0;
+  padding: 8px 10px;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  transition: background 0.3s ease, transform 0.3s ease;
+  animation: fadeInUp 0.4s ease both;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Hover */
+.pilotos li:hover {
+  background: rgba(245, 197, 24, 0.15);
+  transform: translateX(6px);
+}
+
+/* Top 3 destacados */
+.pilotos li.top3 {
+  background: linear-gradient(90deg, #f5c518, #b48a00);
+  color: #111;
+  font-weight: 700;
+  text-shadow: none;
+}
+
+/* ================================
+   ✨ Animaciones
+================================ */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ================================
+   📱 Responsivo
+================================ */
+@media (max-width: 900px) {
+  .puntos-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 25px;
+  }
+
+  .constructores, .pilotos {
+    width: 100%;
+    border: none;
+    padding: 0;
+  }
+
+  .pilotos {
+    margin-top: 20px;
+  }
+
+  .escuderia-card {
+    width: 100%;
+  }
+}

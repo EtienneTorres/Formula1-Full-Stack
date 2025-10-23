@@ -1,0 +1,28 @@
+<div class="escuderias">
+  <button *ngFor="let escuderia of escuderias"
+          (click)="seleccionarEscuderia(escuderia.id)"
+          [class.selected]="escuderia.id === selectedEscuderiaId">
+    {{ escuderia.nombre }}
+  </button>
+</div>
+
+<div class="pilotos-container" *ngIf="pilotos.length > 0; else sinPilotos">
+  <h2>Pilotos Oficiales</h2>
+  <div class="piloto-card" *ngFor="let piloto of pilotos">
+<div class="imgPiloto" [style.background-image]="'url(' + piloto.id + '.png)'"></div>
+    <div class="infoPiloto">
+      <h3>{{ piloto.nombre }}</h3>
+      <p><strong>Número:</strong> {{ piloto.numero }}</p>
+      <p><strong>Edad:</strong> {{ piloto.edad }}</p>
+      <p><strong>Victorias:</strong> {{ piloto.victorias }}</p>
+      <p><strong>Podios:</strong> {{ piloto.podios }}</p>
+      <p><strong>Campeonatos:</strong> {{ piloto.campeonatosMundiales }}</p>
+      <p><strong>Lugar de nacimiento:</strong> {{ piloto.lugarNacimiento }}</p>
+      <p><a [href]="piloto.sitioWeb" target="_blank">Sitio Web</a></p>
+    </div>
+  </div>
+</div>
+
+<ng-template #sinPilotos>
+  <p class="sin-pilotos">🚫 Esta escudería no tiene pilotos oficiales registrados.</p>
+</ng-template>

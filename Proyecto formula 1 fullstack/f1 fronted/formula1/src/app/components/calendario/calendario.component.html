@@ -1,0 +1,16 @@
+<section id="calendario">
+  <h2>Calendario de la Temporada {{ temporada }}</h2>
+
+  <div id="gridCalendario">
+    <div class="cardGP" *ngFor="let c of calendario">
+      <div class="imgCircuito" [style.background-image]="'url(' + getImagenCircuito(c.nombreCircuito) + ')'">
+      </div>
+      <div class="infoGP">
+        <h3>{{ c.nombreGranPremio }}</h3>
+        <p>{{ c.nombreCircuito }}</p>
+        <p>{{ c.fecha | date:'dd/MM/yyyy' }}</p>
+      </div>
+    </div>
+  </div>
+</section>
+
