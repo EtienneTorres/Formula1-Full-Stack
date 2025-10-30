@@ -1,10 +1,9 @@
 .proxima-carrera {
   width: 100%;
- height: calc(100vh - 60px); /* ahora header de 60px */
+  height: calc(100vh - 60px); /* se mantiene debajo del header */
   overflow: hidden;
   font-family: 'Titillium Web', sans-serif;
 }
-
 
 .banner {
   position: relative;
@@ -15,8 +14,8 @@
 .banner img {
   width: 100%;
   height: 100%;
-  object-fit: contain; /* se ve toda la imagen */
-  background: black;  /* para que se vea bien si no llena todo */
+  object-fit: cover; /* ✅ llena toda la pantalla */
+  background: black; 
   filter: brightness(0.4);
 }
 

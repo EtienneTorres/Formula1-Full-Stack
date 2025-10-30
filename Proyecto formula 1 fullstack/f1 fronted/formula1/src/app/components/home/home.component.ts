@@ -51,22 +51,50 @@ obtenerCarreraPorId(id: number) {
 
 obtenerImagenDelCircuito(nombre: string): string {
   switch(nombre) {
-    case "Autódromo Hermanos Rodríguez":
-      return "/mexico.jpg";
-    case "Yas Marina Circuit":
-      return "/assets/circuitos/abu-dhabi.jpg";
     case "Albert Park":
-      return "/assets/circuitos/australia.jpg";
-    case "Losail":
-      return "/assets/circuitos/losail.jpg";
-    case "Las Vegas":
-      return "/assets/circuitos/las-vegas.jpg";
+      return "australia.jpg";
+    case "Autódromo Hermanos Rodríguez":
+      return "mexico.jpg";
+    case "Autódromo Internacional de Miami":
+      return "miami.jpg";
+    case "Autodromo Enzo e Dino Ferrari":
+      return "imola.jpg";
+    case "Autodromo Nazionale di Monza":
+      return "italia.jpeg";
+    case "Bahrain International Circuit":
+      return "bahrain.png";
+    case "Baku City Circuit":
+      return "qatar.jpeg";
+    case "Circuit de Barcelona-Catalunya":
+      return "espana.png";
+    case "Circuit Gilles Villeneuve":
+      return "canada.png";
+    case "Hungaroring":
+      return "hungria.png";
     case "Interlagos":
-      return "/assets/circuitos/interlagos.jpg";
-    case "Circuito de Las Américas":
-      return "/assets/circuitos/americas.jpg";
+      return "interlagos1.jpg";
+    case "Jeddah":
+      return "arabiasaudita.png";
+    case "Marina Bay Circuit":
+      return "singapore.jpeg";
+    case "Monte Carlo":
+      return "monaco.png";
+    case "Red Bull Ring":
+      return "austria.jpeg";
+    case "Shanghai International Circuit":
+      return "shanghai.jpg";
+    case "Silverstone":
+      return "reinonuido.png";
+    case "Spa-Francorchamps":
+      return "belgica.png";
+    case "Suzuka":
+      return "japon.jpg";
+    case "Yas Marina Circuit":
+      return "yasmarina.png";
+    case "Zandvoort":
+      return "paisesbajos.png";
     default:
-      return "/assets/circuitos/default.jpg"; 
+      return "default.jpg";
   }
 }
 
